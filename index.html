@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erstelle eine Frage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'LilitaOne';
+            src: url('LilitaOne-Regular.ttf') format('truetype');
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            background-image: url('bg-pattern.png');
+            background-repeat: repeat;
+            background-size: 500px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10vh;
+        }
+        
+        
+        /* body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.92);
+            z-index: -1;
+        } */
+        
+        .container {
+            text-align: center;
+            z-index: 1;
+        }
+        p {
+            filter: drop-shadow(2px 5px 36px #ffffff);
+            width: 50ch;
+            max-width: 90vw;
+            margin: 0 auto;
+        }
+
+        
+        
+        h1 {
+            text-shadow: 0px 3px 0px #1f314c;
+    filter: drop-shadow(0px 0px 6px #2f97d4);
+    font-family: 'LilitaOne', sans-serif;
+    font-size: 5rem;
+    margin: 0 0 1rem 0;
+    color: #fffcfc;
+        }
+        
+        .subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+        
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1rem;
+            align-items: center;
+            justify-items: center;
+        }
+        
+        .btn {
+            filter: drop-shadow(2px 5px 36px #ffffff);
+            width: 560px;
+            height: 240px;
+            margin: -10px -60px;
+            border: none;
+            cursor: pointer;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: transform 0.2s ease;
+            background-color: transparent;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .btn1 { background-image: url('Button_1.png'); }
+        .btn2 { background-image: url('Button_2.png'); }
+        .btn3 { background-image: url('Button_3.png'); }
+        .btn4 { background-image: url('Button_4.png'); }
+        
+        /* Responsive design for smaller screens */
+        @media (max-width: 1200px) {
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .btn {
+                width: 400px;
+                height: 170px;
+                margin: 0;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .btn {
+                margin: -11px;
+    width: 340px;
+    height: 140px;
+            }
+            
+            h1 {
+                font-size: 2.7rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Erstelle eine Frage</h1>
+        <p class="subtitle">Wähle die passende Fragekategorie aus. Falls keine passt oder es um irgendeine Idee geht, wähle Sonstiges</p>
+        
+        <div class="buttons">
+            <button class="btn btn1" onclick="window.open('https://forms.gle/6vP6ckWTFzdxebGC9', '_blank')"></button>
+            <button class="btn btn2" onclick="window.open('https://forms.gle/yUyShNGHtmqSzwpu6', '_blank')"></button>
+            <button class="btn btn3" onclick="window.open('https://forms.gle/DsHuFKadcKzmzWgW6', '_blank')"></button>
+            <button class="btn btn4" onclick="window.open('https://forms.gle/NWYvSFAzj7fAKBdD9', '_blank')"></button>
+        </div>
+    </div>
+</body>
+</html>
